@@ -1230,7 +1230,7 @@ class MessageManager {
                                     }).then({
                                         value in
                                     })
-                    }if(msg.elemType == V2TIMElemType.ELEM_TYPE_FILE){
+                    }else if(msg.elemType == V2TIMElemType.ELEM_TYPE_FILE){
                         var file:[String:Any] = V2MessageEntity.init(message: msg).convertFileElem(fileElem:  msg.fileElem);
                         async({
                                         _ -> Int in
